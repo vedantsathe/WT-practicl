@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="timerApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Timer App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #timer {
+            font-size: 2em;
+            margin: 20px;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body ng-controller="TimerController">
+
+    <h1>AngularJS Timer App</h1>
+
+    <div id="timer">{{ formattedTime }}</div>
+
+    <button ng-click="startTimer()" ng-disabled="isRunning">Start</button>
+    <button ng-click="stopTimer()" ng-disabled="!isRunning">Stop</button>
+    <button ng-click="resetTimer()">Reset</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        angular.module('timerApp', [])
+            .controller('TimerController', ['$scope', '$interval', function ($scope, $interval) {
+                $scope.time = 0;
+                $scope.formattedTime = formatTime($scope.time);
+                $scope.isRunning = false;
+                var intervalPromise;
+
+                function formatTime(time) {
+                    var minutes = Math.floor(time / 60);
+                    var seconds = time % 60;
+                    return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+                }
+
+                $scope.startTimer = function () {
+                    if (!$scope.isRunning) {
+                        intervalPromise = $interval(function () {
+                            $scope.time++;
+                            $scope.formattedTime = formatTime($scope.time);
+                        }, 1000);
+                        $scope.isRunning = true;
+                    }
+                };
+
+                $scope.stopTimer = function () {
+                    if ($scope.isRunning) {
+                        $interval.cancel(intervalPromise);
+                        $scope.isRunning = false;
+                    }
+                };
+
+                $scope.resetTimer = function () {
+                    $scope.time = 0;
+                    $scope.formattedTime = formatTime($scope.time);
+                    $scope.stopTimer();
+                };
+            }]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<cricket_match>
+<teams>
+<team name="Team INDIA">
+<players>
+<player name="Player 1" batting_order="1" />
+<player name="Player 2" batting_order="2" />
+<player name="Player 3" batting_order="3" />
+<!-- Add more players here -->
+</players>
+</team>
+<team name="Team B">
+<players>
+<player name="Player 4" batting_order="1" />
+<player name="Player 5" batting_order="2" />
+<player name="Player 6" batting_order="3" />
+<!-- Add more players here -->
+</players>
+</team>
+</teams>
+
+
+<innings>
+ 
+<!-- First Innings -->
+<inning number="1" batting_team="Team A" bowling_team="Team B">
+<overs>20</overs>
+<runs>180</runs>
+<wickets>4</wickets>
+<extras>10</extras>
+<batsmen>
+<batsman name="Player 1" runs="50" balls="30" />
+<batsman name="Player 2" runs="40" balls="25" />
+<batsman name="Player 3" runs="30" balls="20" />
+<!-- Add more batsmen here -->
+</batsmen>
+<bowlers>
+<bowler name="Player 4" overs="4" wickets="2" runs="35" />
+<bowler name="Player 5" overs="4" wickets="0" runs="28" />
+<bowler name="Player 6" overs="4" wickets="1" runs="40" />
+<!-- Add more bowlers here -->
+</bowlers>
+</inning>
+
+
+<!-- Second Innings -->
+<inning number="2" batting_team="Team B" bowling_team="Team A">
+<!-- Include details for the second innings here -->
+</inning>
+</innings>
+</cricket_match>
+
+
+JSON:-
+
+
+{
+"cricketTeam": {
+ 
+"teamName": "kk wagh", "captain": "tushar",
+"players": [
+{
+"name": "tushar",
+"role": "Captain",
+"battingStyle": "Right-Handed", "bowlingStyle": "Medium-Fast"
+},
+{
+"name": "sagar",
+"role": "Batsman",
+"battingStyle": "Left-Handed", "bowlingStyle": "fast"
+},
+{
+"name": "vikas",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+}
+{
+"name": "sanket",
+"role": "Captain",
+"battingStyle": "Right-Handed", "bowlingStyle": "Medium-Fast"
+},
+{
+"name": "manav",
+"role": "Batsman",
+"battingStyle": "Left-Handed",
+ 
+"bowlingStyle": "fast"
+},
+{
+"name": "mahesh",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+}
+{
+"name": "rutik",
+"role": "Captain",
+"battingStyle": "Right-Handed", "bowlingStyle": "Medium-Fast"
+},
+{
+"name": "chetan",
+"role": "Batsman",
+"battingStyle": "Left-Handed", "bowlingStyle": "fast"
+},
+{
+"name": "sidhesh",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+}
+
+{
+
+"name": "pranay",
+"role": "Batsman",
+"battingStyle": "Left-Handed", "bowlingStyle": "fast"
+ 
+},
+{
+"name": "dannial",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+}
+
+
+]
+
+}
+
+
+"teamName": "met",
+"captain": "tushar", "players": [
+{
+"name": "tushar",
+"role": "Captain",
+"battingStyle": "Right-Handed", "bowlingStyle": "Medium-Fast"
+},
+{
+"name": "sagar",
+"role": "Batsman",
+"battingStyle": "Left-Handed", "bowlingStyle": "fast"
+},
+{
+"name": "vikas",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+ 
+}
+{
+"name": "sanket",
+"role": "Captain",
+"battingStyle": "Right-Handed", "bowlingStyle": "Medium-Fast"
+},
+{
+"name": "manav",
+"role": "Batsman",
+"battingStyle": "Left-Handed", "bowlingStyle": "fast"
+},
+{
+"name": "mahesh",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+}
+{
+"name": "rutik",
+"role": "Captain",
+"battingStyle": "Right-Handed", "bowlingStyle": "Medium-Fast"
+},
+{
+"name": "chetan",
+"role": "Batsman",
+"battingStyle": "Left-Handed", "bowlingStyle": "fast"
+},
+ 
+{
+
+"name": "sidhesh",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+}
+
+{
+
+"name": "pranay",
+"role": "Batsman",
+"battingStyle": "Left-Handed", "bowlingStyle": "fast"
+},
+{
+"name": "dannial",
+"role": "Bowler",
+"battingStyle": "Right-Handed", "bowlingStyle": "Off-Spin"
+}
+
+
+]
+
+}
+
+}
